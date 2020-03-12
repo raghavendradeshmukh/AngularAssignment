@@ -1,0 +1,41 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+    <label >Choose Your BirthDate ex: 06/12/1997</label>
+        <form [formGroup]="ageCalculator">
+            
+        <div class="form-group" [ngClass]="{'has-error':ageCalculator.get('mydate').errors && 
+        (ageCalculator.get('mydate').touched || ageCalculator.get('mydate').dirty)}">
+             <input type="date"
+             placeholder="Datepicker" 
+             #date
+             formControlName="mydate"
+             class="form-control">   
+
+             <span class="help-block" *ngIf="ageCalculator.get('mydate').errors && 
+             (ageCalculator.get('mydate').touched || ageCalculator.get('mydate').dirty)">
+             <span *ngIf="ageCalculator.get('mydate').errors.required">
+                 Date is required
+             </span>
+            </span>
+            </div>
+       
+        
+        <button type="button"  class="btn btn-primary" (click)="calculateAge(date.value)"
+         [disabled]="ageCalculator.invalid">click here</button>
+       
+        <p>Your Age is : {{ InputDate}}</p>
+        
+         
+         
+        </form>
+    </div>
+    </div>
+    </div>    
+         
+           
+           
+
+     
+   
+
