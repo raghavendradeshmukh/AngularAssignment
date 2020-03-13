@@ -116,24 +116,6 @@
       "percentage": "90",
       "marks": "98",
       "dob": "2014-03-03"
-    },
-    {
-      "id": 17,
-      "firstname": "Mayur",
-      "lastname": "Malpani",
-      "class": "First",
-      "percentage": "95",
-      "marks": "89",
-      "dob": "2008-03-05"
-    },
-    {
-      "id": 18,
-      "firstname": "Gaurav",
-      "lastname": "Malpani",
-      "class": "Eight",
-      "percentage": "78",
-      "marks": "89",
-      "dob": "2009-12-31"
     }
   ]
 }

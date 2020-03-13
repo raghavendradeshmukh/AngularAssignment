@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Student } from '../model/student.model';
+// import { Student } from '../model/student.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
@@ -9,22 +9,12 @@ export class StudentService {
 
   mockUrl = "http://localhost:3001/students";
 
-  studentInfo: Student = {
-    id: null,
-    firstname: '',
-    lastname: '',
-    class: '',
-    percentage: null,
-    marks: null,
-    dob: null
-  };
-
   constructor(private http: HttpClient) { }
 
-  getAllEmployee(): Observable<Student[]> {
-    return this.http.get<Student[]>(this.mockUrl);
+  getAllEmployee(): Observable<angularAssignment.Student[]> {
+    return this.http.get<angularAssignment.Student[]>(this.mockUrl);
   }
-  createEmployee(student: Student): Observable<Student> {
-    return this.http.post<Student>(this.mockUrl, student);
+  createEmployee(student: angularAssignment.Student): Observable<angularAssignment.Student> {
+    return this.http.post<angularAssignment.Student>(this.mockUrl, student);
   }
 }

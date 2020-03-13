@@ -85,7 +85,7 @@
             <div class="form-group">
                 <label>Country</label>&nbsp;&nbsp;
                 <select [(ngModel)]="country" formControlName="country" class="form-control">
-                    <option [ngValue]="null">Choose a state</option>
+                    <option [ngValue]="null" selected>Choose a Country</option>
                     <option *ngFor="let country of countries;"[ngValue]="country">{{country.name}}</option>
                 </select>
 

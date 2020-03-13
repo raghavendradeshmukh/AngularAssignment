@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from 'src/app/model/student.model';
+// import { Student } from 'src/app/model/student.model';
 import { StudentService } from 'src/app/services/student.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class StudentListComponent implements OnInit {
 
-  studentData:Student[]=[];
+  studentData:angularAssignment.Student[]=[];
   constructor(private studentService:StudentService) { }
 
   ngOnInit() {

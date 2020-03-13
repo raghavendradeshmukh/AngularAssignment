@@ -43,7 +43,7 @@
       "lastname": "Watson",
       "class": "Fifth",
       "percentage": "95",
-      "marks": "32"
+      "marks": "40"
     },
     {
       "id": 6,
@@ -92,12 +92,21 @@
     },
     {
       "id": 11,
-      "rollno": "13",
+      "rollno": "11",
       "firstname": "Amol",
       "lastname": "Jadhav",
       "class": "Ninth",
       "percentage": "90",
       "marks": "90"
+    },
+    {
+      "id": 12,
+      "rollno": "12",
+      "firstname": "Gaurav",
+      "lastname": "Malpani",
+      "class": "Second",
+      "percentage": "90",
+      "marks": "96"
     }
   ]
 }

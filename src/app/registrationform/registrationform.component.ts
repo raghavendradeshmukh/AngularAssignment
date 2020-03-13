@@ -9,31 +9,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegistrationformComponent implements OnInit {
 
   registerForm: FormGroup;
-    submitted = false;
-    mobileNumberRegex=/^\d{3}-\d{3}-\d{4}$/;
-    name_regex = /^[a-zA-Z]+$/;
-    email_regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    countryTemplateForm = null;
+  submitted = false;
+  mobileNumberRegex = /^\d{3}-\d{3}-\d{4}$/;
+  name_regex = /^[a-zA-Z]+$/;
+  email_regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  countryTemplateForm = null;
   countries = [
-  { name: 'USA'},
-  { name: 'India' },
-  { name: 'France' }
-        ];
+    { name: 'USA' },
+    { name: 'India' },
+    { name: 'France' }
+  ];
 
-    constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
 
 
     this.registerForm = this.formBuilder.group({
-      firstName: ['', [Validators.required,Validators.pattern(this.name_regex)]],
-      lastName: ['', [Validators.required,Validators.pattern(this.name_regex)]],
+      firstName: ['', [Validators.required, Validators.pattern(this.name_regex)]],
+      lastName: ['', [Validators.required, Validators.pattern(this.name_regex)]],
       email: ['', [Validators.required, Validators.pattern(this.email_regex)]],
-     contactNumber:['',[Validators.required,Validators.pattern(this.mobileNumberRegex)]],
-     dob:['',Validators.required],
-     country: [null, Validators.required]
+      contactNumber: ['', [Validators.required, Validators.pattern(this.mobileNumberRegex)]],
+      dob: ['', Validators.required],
+      country: [null, Validators.required]
 
-  });
+    });
   }
 
   onSubmit() {
@@ -41,11 +41,11 @@ export class RegistrationformComponent implements OnInit {
 
     // stop the process here if form is invalid
     if (this.registerForm.invalid) {
-        return;
+      return;
     }
 
     alert('SUCCESS!!');
     this.registerForm.reset();
- 
-}
+
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentDataService } from 'src/app/services/student-data.service';
-import {StudentData } from 'src/app/model/student.model';
+// import {StudentData } from 'src/app/model/student.model';
+import { ConstantService } from 'src/app/services/constant.service';
 
 @Component({
   selector: 'app-student-data-form',
@@ -9,9 +10,9 @@ import {StudentData } from 'src/app/model/student.model';
 })
 export class StudentDataFormComponent implements OnInit {
 
-  constructor(private studentService:StudentDataService) { }
+  constructor(private studentService:StudentDataService,private constantService:ConstantService) { }
 
-  onSubmit(student:StudentData){
+  onSubmit(student:angularAssignment.StudentData){
     if(student.id===null)
     {
       this.createEmployee(student);
@@ -23,10 +24,10 @@ export class StudentDataFormComponent implements OnInit {
 
   ngOnInit() {
   }
-  createEmployee(student:StudentData){
+  createEmployee(student:angularAssignment.StudentData){
     this.studentService.createEmployee(student).subscribe();
   }
-  updateEmployee(student:StudentData){
+  updateEmployee(student:angularAssignment.StudentData){
     this.studentService.updateEmployee(student).subscribe();
   }
 }

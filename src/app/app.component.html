@@ -1,14 +1,13 @@
-<!-- <div class="container"><br/> -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+  <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2"><br/>
         <ul class="nav nav-tabs">
-          <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}"><a routerLink="/">Q1</a></li>
-          <li role="presentation" routerLinkActive="active"><a routerLink="/agecalculator">Q2</a></li>
+          <li *ngFor="let person of people" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}"><a routerLink={{person.name}}>{{person.title}}</a></li>
+          <!-- <li role="presentation" routerLinkActive="active"><a routerLink="/agecalculator">Q2</a></li>
           <li role="presentation" routerLinkActive="active"><a routerLink="/registrationform">Q3</a></li>
           <li role="presentation" routerLinkActive="active"><a routerLink="/addStudentData">Q4</a></li>
           <li role="presentation" routerLinkActive="active"><a routerLink="/matTable">Q5</a></li>
           <li role="presentation" routerLinkActive="active"><a routerLink="/welcomePage">Q6</a></li>
-          <li role="presentation" routerLinkActive="active"><a routerLink="/studentCrudOpreation">Q7</a></li>
+          <li role="presentation" routerLinkActive="active"><a routerLink="/studentCrudOpreation">Q7</a></li> -->
         </ul>
       </div>
     </div>
@@ -18,10 +17,5 @@
       <router-outlet></router-outlet>
       </div>
     </div>
-  <!-- </div> -->
 
-  <!-- <button mat-raised-button>hello world</button> -->
-      <!-- <app-email></app-email>-->
-      <!--<app-agecalculator></app-agecalculator>-->
-      <!--<app-registrationform></app-registrationform>-->
   

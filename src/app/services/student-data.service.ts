@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { StudentData } from '../model/student.model';
+// import { StudentData } from '../model/student.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,7 +10,7 @@ export class StudentDataService {
 
   mockUrl = "http://localhost:3000/studentsDB";
 
-  studentInfo: StudentData = {
+  studentInfo: angularAssignment.StudentData = {
     id: null,
     rollno:null,
     firstname: '',
@@ -22,19 +22,19 @@ export class StudentDataService {
 
   constructor(private http: HttpClient) { }
 
-  getAllEmployee(): Observable<StudentData[]> {
-    return this.http.get<StudentData[]>(this.mockUrl);
+  getAllEmployee(): Observable<angularAssignment.StudentData[]> {
+    return this.http.get<angularAssignment.StudentData[]>(this.mockUrl);
   }
 
-  createEmployee(student:StudentData):Observable<StudentData>{
-    return this.http.post<StudentData>(this.mockUrl,student);
+  createEmployee(student:angularAssignment.StudentData):Observable<angularAssignment.StudentData>{
+    return this.http.post<angularAssignment.StudentData>(this.mockUrl,student);
   }
 
-  deleteEmployee(id: number): Observable<StudentData> {
-    return this.http.delete<StudentData>(this.mockUrl + '/' + id);
+  deleteEmployee(id: number): Observable<angularAssignment.StudentData> {
+    return this.http.delete<angularAssignment.StudentData>(this.mockUrl + '/' + id);
   }
 
-  updateEmployee(student: StudentData): Observable<StudentData> {
-    return this.http.put<StudentData>(this.mockUrl + "/" + student.id, student);
+  updateEmployee(student: angularAssignment.StudentData): Observable<angularAssignment.StudentData> {
+    return this.http.put<angularAssignment.StudentData>(this.mockUrl + "/" + student.id, student);
   }
 }

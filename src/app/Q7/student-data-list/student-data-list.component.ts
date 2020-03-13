@@ -1,6 +1,6 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import {MatTableDataSource,MatSort,MatPaginator} from '@angular/material';
-import { StudentData } from 'src/app/model/student.model';
+// import { StudentData } from 'src/app/model/student.model';
 import { StudentDataService } from 'src/app/services/student-data.service';
 
 
@@ -11,7 +11,7 @@ import { StudentDataService } from 'src/app/services/student-data.service';
 })
 export class StudentDataListComponent implements OnInit {
 
-  allStudentData:StudentData[]=[];
+  allStudentData:angularAssignment.StudentData[]=[];
   dataSource;
   
   // displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
@@ -47,11 +47,11 @@ export class StudentDataListComponent implements OnInit {
   }
 
   DeleteStudent(id:number){
-    this.student.deleteEmployee(id).subscribe((data:StudentData)=>{
+    this.student.deleteEmployee(id).subscribe((data:angularAssignment.StudentData)=>{
       this.getAllStudentData();
     });
   }
-  editStudent(student: StudentData) {
+  editStudent(student:angularAssignment.StudentData) {
     this.student.studentInfo=Object.assign({},student);
   }
 }
