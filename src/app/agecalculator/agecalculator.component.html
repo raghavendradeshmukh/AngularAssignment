@@ -2,16 +2,15 @@
         <div class="row">
             <div class="col-xs-4">
     <label >Choose Your BirthDate ex: 06/12/1997</label>
-        <form [formGroup]="ageCalculator">
-            
+        <form [formGroup]="ageCalculator">       
         <div class="form-group" [ngClass]="{'has-error':ageCalculator.get('mydate').errors && 
         (ageCalculator.get('mydate').touched || ageCalculator.get('mydate').dirty)}">
-             <input type="date"
+             <!-- <input type="date"
              placeholder="Datepicker" 
              #date
              formControlName="mydate"
-             class="form-control">   
-
+             class="form-control">    -->
+             <input type="text" bsDatepicker placeholder="datePicker" #date formControlName="mydate" class="form-control" [minDate]="minDate" [maxDate]="maxDate">
              <span class="help-block" *ngIf="ageCalculator.get('mydate').errors && 
              (ageCalculator.get('mydate').touched || ageCalculator.get('mydate').dirty)">
              <span *ngIf="ageCalculator.get('mydate').errors.required">
@@ -20,14 +19,9 @@
             </span>
             </div>
        
-        
         <button type="button"  class="btn btn-primary" (click)="calculateAge(date.value)"
          [disabled]="ageCalculator.invalid">click here</button>
-       
-        <p>Your Age is : {{ InputDate}}</p>
-        
-         
-         
+        <p *ngIf="isCalculated">Your Age is : {{ InputDate}}</p>
         </form>
     </div>
     </div>

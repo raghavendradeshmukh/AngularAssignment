@@ -16,24 +16,15 @@ export class StudentService {
     class: '',
     percentage: null,
     marks: null,
-    dob:null
+    dob: null
   };
 
-
   constructor(private http: HttpClient) { }
-
-  // getAllEmployee(): Observable<Student[]> {
-  //   return this.http.get<Student[]>(this.mockUrl);
-  // }
-
-  // createEmployee(student: Student) {
-  //   return this.http.post<Student>(this.mockUrl, student);
-  // }
 
   getAllEmployee(): Observable<Student[]> {
     return this.http.get<Student[]>(this.mockUrl);
   }
-  createEmployee(student:Student):Observable<Student>{
-    return this.http.post<Student>(this.mockUrl,student);
+  createEmployee(student: Student): Observable<Student> {
+    return this.http.post<Student>(this.mockUrl, student);
   }
 }

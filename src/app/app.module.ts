@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {BsDatepickerModule} from 'ngx-bootstrap/datepicker'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmailComponent } from './email/email.component';
@@ -66,6 +66,7 @@ const appRoutes : Routes =[
     MatPaginatorModule,
     HttpClientModule,
     FormsModule,
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes),
   ],
   providers: [StudentService],
