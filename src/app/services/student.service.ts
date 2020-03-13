@@ -15,7 +15,8 @@ export class StudentService {
     lastname: '',
     class: '',
     percentage: null,
-    marks: null
+    marks: null,
+    dob:null
   };
 
 

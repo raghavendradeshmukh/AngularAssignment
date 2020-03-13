@@ -5,6 +5,7 @@ export class Student{
     class:string;
     percentage:number;
     marks:number;
+    dob:Date;
 }
 
 export class StudentData{
