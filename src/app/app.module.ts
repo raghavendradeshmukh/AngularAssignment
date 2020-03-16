@@ -36,7 +36,6 @@ const appRoutes : Routes =[
     {path:'events',component:EventsComponent},
     {path:'contactUs',component:ContactUsComponent}
   ]},
-  // {path:'home',component:HomeComponent},
   {path:'studentCrudOpreation',component:StudentDataFormComponent},
 ];
 

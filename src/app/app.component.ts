@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularAssignment';
-  people: any[] = [
+  Links: any[] = [
     {
       "name": "/",
       "title":"Q1"
