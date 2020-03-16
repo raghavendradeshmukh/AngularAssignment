@@ -30,13 +30,14 @@ const appRoutes : Routes =[
   { path:'agecalculator',component : AgecalculatorComponent},
   { path:'registrationform',component : RegistrationformComponent},
   { path:'addStudentData',component : StudentFormComponent},
-  {path: 'matTable',component:MatTableComponent},
+  {path: 'matTable',component:StudentListComponent},
   {path:'welcomePage',component:WelcomeComponent,children:[
     {path:'',component:HomeComponent},
     {path:'events',component:EventsComponent},
     {path:'contactUs',component:ContactUsComponent}
   ]},
   {path:'studentCrudOpreation',component:StudentDataFormComponent},
+  // {path:'matTablE',component:StudentListComponent}
 ];
 
 @NgModule({
