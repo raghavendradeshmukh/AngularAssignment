@@ -1,7 +1,8 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import {MatTableDataSource,MatSort,MatPaginator} from '@angular/material';
 // import { StudentData } from 'src/app/model/student.model';
-import { StudentDataService } from 'src/app/services/student-data.service';
+// import { StudentDataService } from 'src/app/services/student-data.service';
+import {StudentDataService} from '@assignmentService/student-data.service';
 
 
 @Component({

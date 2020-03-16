@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { Student } from 'src/app/model/student.model';
-import { StudentService } from 'src/app/services/student.service';
-import { ConstantService } from 'src/app/services/constant.service';
+// import { StudentService } from 'src/app/services/student.service';
+// import { ConstantService } from 'src/app/services/constant.service';
+import{StudentService} from '@assignmentService/student.service';
+import {ConstantService} from '@assignmentService/constant.service';
 
 @Component({
   selector: 'app-student-form',

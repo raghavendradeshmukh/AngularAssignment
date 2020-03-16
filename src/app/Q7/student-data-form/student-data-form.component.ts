@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentDataService } from 'src/app/services/student-data.service';
+// import { StudentDataService } from 'src/app/services/student-data.service';
+import {StudentDataService} from '@assignmentService/student-data.service';
 // import {StudentData } from 'src/app/model/student.model';
-import { ConstantService } from 'src/app/services/constant.service';
+// import { ConstantService } from 'src/app/services/constant.service';
+import {ConstantService} from '@assignmentService/constant.service';
+
 
 @Component({
   selector: 'app-student-data-form',

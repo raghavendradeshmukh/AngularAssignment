@@ -56,7 +56,7 @@
 
             <div class="form-group">
                 <label>Phone Number</label>
-                <input type="text" formControlName="contactNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.contactNumber.errors }"  placeholder="222-222-2222"  />
+                <input type="text" formControlName="contactNumber" class="form-control" maxlength="12" [ngClass]="{ 'is-invalid': submitted &amp;&amp; registerForm.controls.contactNumber.errors }"  placeholder="222-222-2222"  />
                
                 <div *ngIf="registerForm.controls.contactNumber.invalid && (registerForm.controls.contactNumber.dirty || 
                 registerForm.controls.contactNumber.touched)" 
@@ -84,15 +84,20 @@
 
             <div class="form-group">
                 <label>Country</label>&nbsp;&nbsp;
-                <select [(ngModel)]="country" formControlName="country" class="form-control">
+                <!-- <select [(ngModel)]="country" formControlName="country" class="form-control">
                     <option [ngValue]="null" selected>Choose a Country</option>
                     <option *ngFor="let country of countries;"[ngValue]="country">{{country.name}}</option>
-                </select>
+                </select> -->
 
-                <div *ngIf="registerForm.controls.country.invalid && (registerForm.controls.country.dirty || 
-                registerForm.controls.country.touched)" 
+                <select class="custom-select" (change)="changeCity($event)" class="form-control"  formControlName="cityName">
+                    <option value="">Choose your city</option>
+                    <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+                  </select>
+
+                <div *ngIf="registerForm.controls.cityName.invalid && (registerForm.controls.cityName.dirty || 
+                registerForm.controls.cityName.touched)" 
                class="text-danger">
-               <div *ngIf="registerForm.controls.country.errors.required">Please Select One or select other than Choose a country </div>
+               <div *ngIf="registerForm.controls.cityName.errors.required">Please Select One or select other than Choose a country </div>
               
            
                </div>     

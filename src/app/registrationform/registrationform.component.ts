@@ -14,11 +14,13 @@ export class RegistrationformComponent implements OnInit {
   name_regex = /^[a-zA-Z]+$/;
   email_regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   countryTemplateForm = null;
-  countries = [
-    { name: 'USA' },
-    { name: 'India' },
-    { name: 'France' }
-  ];
+  // countries = [
+  //   { name: 'USA' },
+  //   { name: 'India' },
+  //   { name: 'France' }
+  // ];
+
+  City: any = ['Florida', 'South Dakota', 'Tennessee', 'Michigan'];
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -31,9 +33,20 @@ export class RegistrationformComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern(this.email_regex)]],
       contactNumber: ['', [Validators.required, Validators.pattern(this.mobileNumberRegex)]],
       dob: ['', Validators.required],
-      country: [null, Validators.required]
+      cityName: ['', Validators.required]
 
     });
+  }
+
+    changeCity(e) {
+    console.log(e.value)
+    this.cityName.setValue(e.target.value, {
+      onlySelf: true
+    })
+  }
+
+  get cityName() {
+    return this.registerForm.get('cityName');
   }
 
   onSubmit() {
