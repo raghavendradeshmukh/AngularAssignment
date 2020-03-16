@@ -8,7 +8,7 @@
         <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
           <small *ngIf="primEmail.errors?.required" class="text-danger">Primary email is required</small>
           <!--question mark(?) is a safe navigation operator-->
-          <small *ngIf="primEmail.errors?.pattern; else other_content" class="text-danger">Invalid Email</small>
+          <small *ngIf="primEmail.errors?.pattern" class="text-danger">Invalid Email</small>
           <small *ngIf="(primEmail.valid)" class="text-success" >Valid Email</small>
         
         </div>

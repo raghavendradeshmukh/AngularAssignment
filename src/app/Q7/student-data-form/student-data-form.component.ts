@@ -13,8 +13,7 @@ import {ConstantService} from '@assignmentService/constant.service';
 })
 export class StudentDataFormComponent implements OnInit {
 
-  constructor(private studentService:StudentDataService,private constantService:ConstantService) { }
-
+  constructor(public studentService:StudentDataService,public constantService:ConstantService) { }
   onSubmit(student:angularAssignment.StudentData){
     if(student.id===null)
     {

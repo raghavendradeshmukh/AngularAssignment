@@ -22,7 +22,7 @@ export class StudentFormComponent implements OnInit {
     dob: null
   };
 
-  constructor(public studentService:StudentService, private constantService:ConstantService ) { }
+  constructor(public studentService:StudentService, public constantService:ConstantService ) { }
 
   ngOnInit() {
   }
