@@ -14,6 +14,7 @@ import {MatButtonModule, MatSortModule, MatPaginatorModule} from '@angular/mater
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 import { StudentFormComponent } from './Q4/student-form/student-form.component';
 import { StudentListComponent } from './Q4/student-list/student-list.component';
 import { StudentService } from './services/student.service';
@@ -66,6 +67,7 @@ const appRoutes : Routes =[
     MatPaginatorModule,
     HttpClientModule,
     FormsModule,
+    MatIconModule,
     BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes),
   ],

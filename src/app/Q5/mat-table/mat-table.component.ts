@@ -1,5 +1,6 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import {MatTableDataSource,MatSort,MatPaginator} from '@angular/material';
+import { ConstantService } from '@assignmentService/constant.service';
 export interface PeriodicElement {
   FirstName: string;
   LastName: string;
@@ -31,7 +32,7 @@ export class MatTableComponent implements OnInit {
   @ViewChild(MatSort,{static:true}) sort:MatSort;
   @ViewChild(MatPaginator,{static:true}) paginator:MatPaginator;
 
-  constructor() { }
+  constructor(public constantService:ConstantService) { }
 
   ngOnInit() {
     this.dataSource.sort=this.sort;
