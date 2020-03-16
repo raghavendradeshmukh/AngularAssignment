@@ -1,0 +1,121 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "firstname": "Sarang",
+      "lastname": "Dahiwale",
+      "class": "Fourth",
+      "percentage": "90",
+      "marks": "94",
+      "dob": "2014-05-08"
+    },
+    {
+      "id": 3,
+      "firstname": "Raghavendra",
+      "lastname": "Deshmukh",
+      "class": "Fourth",
+      "percentage": "78",
+      "marks": "90",
+      "dob": "2015-06-10"
+    },
+    {
+      "id": 4,
+      "firstname": "Pratik",
+      "lastname": "Bilonikar",
+      "class": "Second",
+      "percentage": "79",
+      "marks": "94",
+      "dob": "2013-07-12"
+    },
+    {
+      "id": 6,
+      "firstname": "Madhuri",
+      "lastname": "Chaudhary",
+      "class": "Third",
+      "percentage": "90",
+      "marks": "90",
+      "dob": "2010-02-11"
+    },
+    {
+      "id": 7,
+      "firstname": "John",
+      "lastname": "Watson",
+      "class": "Fifth",
+      "percentage": "95",
+      "marks": "32",
+      "dob": "2011-03-09"
+    },
+    {
+      "id": 8,
+      "firstname": "Dinesh",
+      "lastname": "Patil",
+      "class": "Fifth",
+      "percentage": "78",
+      "marks": "94",
+      "dob": "2015-10-08"
+    },
+    {
+      "id": 9,
+      "firstname": "Kunal",
+      "lastname": "Joshi",
+      "class": "Sixth",
+      "percentage": "95",
+      "marks": "98",
+      "dob": "2012-03-06"
+    },
+    {
+      "id": 11,
+      "firstname": "Rohit",
+      "lastname": "Pawar",
+      "class": "Third",
+      "percentage": "90",
+      "marks": "32",
+      "dob": "2012-03-06"
+    },
+    {
+      "id": 12,
+      "firstname": "Shubham",
+      "lastname": "Gadappa",
+      "class": "First",
+      "percentage": "90",
+      "marks": "87",
+      "dob": "2012-03-08"
+    },
+    {
+      "id": 13,
+      "firstname": "Manoj",
+      "lastname": "Patil",
+      "class": "Second",
+      "percentage": "98",
+      "marks": "100",
+      "dob": "2012-03-07"
+    },
+    {
+      "id": 14,
+      "firstname": "Shubham",
+      "lastname": "Thorat",
+      "class": "Eight",
+      "percentage": "80",
+      "marks": "78",
+      "dob": "2012-03-05"
+    },
+    {
+      "id": 15,
+      "firstname": "Bhavik",
+      "lastname": "Dhabale",
+      "class": "Sixth",
+      "percentage": "92",
+      "marks": "67",
+      "dob": "2012-03-04"
+    },
+    {
+      "id": 16,
+      "firstname": "Vivek",
+      "lastname": "Hoshing",
+      "class": "Fourth",
+      "percentage": "90",
+      "marks": "98",
+      "dob": "2014-03-03"
+    }
+  ]
+}
