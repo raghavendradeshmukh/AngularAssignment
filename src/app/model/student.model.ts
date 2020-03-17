@@ -3,10 +3,10 @@ namespace angularAssignment {
         id: number;
         firstname: string;
         lastname: string;
+        dob: Date;
         class: string;
         percentage: number;
         marks: number;
-        dob: Date;
     }
 
     export interface StudentData {
